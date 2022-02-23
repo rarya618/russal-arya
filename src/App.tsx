@@ -16,7 +16,7 @@ type Props = {
 	isFilled?: boolean
 };
 
-const Button = (props: Props) => {
+export const Button = (props: Props) => {
 	const StandardButton = styled.button`
 		border: solid 1px #FFD32D;
 		padding: 10px 18px;

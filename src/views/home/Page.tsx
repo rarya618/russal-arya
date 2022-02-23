@@ -1,21 +1,35 @@
 import React from 'react';
 import '../../App.css';
 import styled from 'styled-components';
+
 import Landing from './Landing';
-import Tools from './Tools';
-import Languages from './Languages';
+import Tools from './tools/Main';
+import Skills from './skills/Main';
 import Projects from './Projects';
 import CallToAction from './CallToAction';
 
+export const RowContent = styled.div`
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+`;
+
+export const ColContent = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
 export const Section = styled.section`
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     vertical-align: middle;
 `;
 
 export const Content = styled.div`
-    margin: auto 0;
+    margin: auto;
+    padding: 10vh 0;
+    max-width: 1080px;
 `;
 
 export const Title = styled.h1`
@@ -35,7 +49,7 @@ function Home() {
         <>
             <Landing />
             <Tools />
-            <Languages />
+            <Skills />
             <Projects />
             <CallToAction />
         </>
