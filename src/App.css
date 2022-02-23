@@ -29,8 +29,44 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.green-gradient {
+  background: linear-gradient(180deg, #085E7D 20%, #4E9F3D 98%);
+}
+
+.dark-green-gradient {
+  background: linear-gradient(180deg, #085E7D 0%, #008E89 100%);
+}
+
+.sub-green-gradient {
+  background: linear-gradient(180deg, #008E89 0%, #4E9F3D 100%);
+}
+
+.green {
+  background: #4E9F3D;
+}
+
+.green-text {
+  color: #4E9F3D;
+}
+
+.dark-green-text {
+  color: #085E7D;
+}
+
+.yellow {
+  background: #FFD32D;
+}
+
+.yellow-text {
+  color: #FFD32D;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.transparent {
+  background: transparent;
 }
 
 @keyframes App-logo-spin {

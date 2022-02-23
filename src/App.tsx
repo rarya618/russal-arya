@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router';
 import styled from 'styled-components';
 
 import './App.css';
-import Home from './views/Home';
+import Home from './views/home/Page';
 
 const Menu = styled.nav`
 	position: absolute;
@@ -25,29 +25,14 @@ const Button = (props: Props) => {
 		font-weight: normal;
 		font-family: 'Oxygen';
 		font-size: calc(10px + 1vmin);
-		background: transparent;
-		color: #FFD32D;
-		border-radius: 5px;
-	`;
-
-	const FilledButton = styled.button`
-		border: solid 1px #FFD32D;
-		padding: 10px 18px;
-		margin: 8px;
-		font-size: calc(10px + 1vmin);
-		font-style: normal;
-		font-weight: normal;
-		font-family: 'Oxygen';
-		background: #FFD32D;
-		color: #008E89;
 		border-radius: 5px;
 	`;
 
 	if (props.isFilled)
-		return <FilledButton>{props.label}</FilledButton>
+		return <StandardButton className="yellow dark-green-text">{props.label}</StandardButton>
 
 	else
-		return <StandardButton>{props.label}</StandardButton>
+		return <StandardButton className="transparent yellow-text">{props.label}</StandardButton>
 }
 
 function App() {
