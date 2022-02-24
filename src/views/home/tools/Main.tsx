@@ -31,7 +31,7 @@ function Tools() {
                         return <BoxGen logo={box.logo} title={box.title} text={box.text}/>
                     })}
                 </RowContent>
-                <Button label="View All" />
+                <Button label="View All" color="white" />
             </Content>
         </Section>
     );

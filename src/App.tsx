@@ -13,12 +13,21 @@ const Menu = styled.nav`
 
 type Props = {
 	label: string,
+	color?: string,
 	isFilled?: boolean
 };
 
 export const Button = (props: Props) => {
+	var color: string;
+
+	if (props.color) {
+		color = props.color;
+	} else {
+		color = "yellow";
+	}
+
 	const StandardButton = styled.button`
-		border: solid 1px #FFD32D;
+		border: solid 1px;
 		padding: 10px 18px;
 		margin: 8px;
 		font-style: normal;
@@ -27,12 +36,12 @@ export const Button = (props: Props) => {
 		font-size: calc(10px + 1vmin);
 		border-radius: 5px;
 	`;
-
+	
 	if (props.isFilled)
-		return <StandardButton className="yellow dark-green-text">{props.label}</StandardButton>
+		return <StandardButton className={color + " dark-green-text"}>{props.label}</StandardButton>
 
 	else
-		return <StandardButton className="transparent yellow-text">{props.label}</StandardButton>
+		return <StandardButton className={"transparent " + color + "-text"}>{props.label}</StandardButton>
 }
 
 function App() {
@@ -40,7 +49,7 @@ function App() {
 		<div className="App">
 			<Menu>
 				<Button label="Tools" />
-				<Button label="Languages" />
+				<Button label="Skills" />
 				<Button label="Projects" />
 				<Button label="Profile" isFilled={true} />
 			</Menu>

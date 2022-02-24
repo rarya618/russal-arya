@@ -11,6 +11,10 @@
   margin: 20px;
 }
 
+.padded {
+  padding: 20px 0 5px 0;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
@@ -19,8 +23,12 @@
   border-right: 1px solid;
 }
 
-.bottom-border {
-  border-bottom: 1px solid;
+.middle-right {
+  margin: auto 20px auto auto !important;
+}
+
+.left {
+  text-align: left;
 }
 
 /* Colors */
@@ -52,6 +60,10 @@
   background: #FFD32D;
 }
 
+.light-gray {
+  background: #f5f5f5;
+}
+
 .yellow-text {
   color: #FFD32D;
 }
@@ -62,4 +74,21 @@
 
 .transparent {
   background: transparent;
+}
+
+.center {
+  align-items: center;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-full {
+    width: 100% !important;
+  }
+  .right-border {
+    border-right: none;
+  }
 }

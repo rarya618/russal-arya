@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Landing from './Landing';
 import Tools from './tools/Main';
 import Skills from './skills/Main';
-import Projects from './Projects';
+import Projects from './projects/Main';
 import CallToAction from './CallToAction';
 
 export const RowContent = styled.div`
@@ -28,7 +28,7 @@ export const Section = styled.section`
 
 export const Content = styled.div`
     margin: auto;
-    padding: 10vh 0;
+    padding: 30px 15px;
     max-width: 1080px;
 `;
 

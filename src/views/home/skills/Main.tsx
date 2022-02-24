@@ -28,7 +28,7 @@ const RowContent = styled.div`
 
 const ColContent = styled.div`
     display: flex;
-    width: 50%;
+    width: calc(50% - 61px);
     margin: 0;
     padding: 30px;
     flex-direction: column;
@@ -83,12 +83,12 @@ function Skills() {
     return (
         <Section className="dark-green-gradient">
             <Content>
-                <RowContent>
-                    <ColContent className="right-border yellow-text">
+                <RowContent className="wrap">
+                    <ColContent className="right-border yellow-text mobile-full">
                         <ListGen list={Languages} heading="Languages" />
                         <ListGen list={Apps} heading="What apps have I worked on?" />
                     </ColContent>
-                    <ColContent>
+                    <ColContent className="mobile-full">
                         <ListGen list={Frameworks} heading="Frameworks" />
                         <Divider className="yellow-text"/>
                         <ListGen list={MoreFrameworks} />
