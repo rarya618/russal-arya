@@ -11,6 +11,10 @@
   margin: 20px;
 }
 
+.small-width {
+  max-width: 650px !important;
+}
+
 .padded {
   padding: 20px 0 5px 0;
 }
@@ -46,6 +50,10 @@
 
 .green {
   background: #4E9F3D;
+}
+
+.dark-green {
+  background: #085E7D;
 }
 
 .green-text {

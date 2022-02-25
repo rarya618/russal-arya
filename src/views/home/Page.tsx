@@ -6,7 +6,7 @@ import Landing from './Landing';
 import Tools from './tools/Main';
 import Skills from './skills/Main';
 import Projects from './projects/Main';
-import CallToAction from './CallToAction';
+import CallToAction from './call-to-action/Main';
 
 export const RowContent = styled.div`
     display: flex;

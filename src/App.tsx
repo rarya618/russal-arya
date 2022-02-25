@@ -14,7 +14,8 @@ const Menu = styled.nav`
 type Props = {
 	label: string,
 	color?: string,
-	isFilled?: boolean
+	isFilled?: boolean,
+	link?: string
 };
 
 export const Button = (props: Props) => {
@@ -37,11 +38,14 @@ export const Button = (props: Props) => {
 		border-radius: 5px;
 	`;
 	
-	if (props.isFilled)
-		return <StandardButton className={color + " dark-green-text"}>{props.label}</StandardButton>
-
+	if (props.isFilled) {
+		if (color === "dark-green") {
+			return <a href={props.link}><StandardButton className={color + " yellow-text"}>{props.label}</StandardButton></a>
+		}
+		return <a href={props.link}><StandardButton className={color + " dark-green-text"}>{props.label}</StandardButton></a>
+	}
 	else
-		return <StandardButton className={"transparent " + color + "-text"}>{props.label}</StandardButton>
+		return <a href={props.link}><StandardButton className={"transparent " + color + "-text"}>{props.label}</StandardButton></a>
 }
 
 function App() {

@@ -9,7 +9,7 @@ type Props = {
     text: string
 }
 
-const Box = styled.div`
+export const Box = styled.div`
     background: #fff;
     margin: 8px;
     padding: 15px 8px;
@@ -23,7 +23,7 @@ const Logo = styled.img`
     margin: auto;
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
     font-size: calc(20px + 0.8vmin);
     margin: 5px 15px;
     font-style: normal;
@@ -32,7 +32,7 @@ const Title = styled.h2`
     text-align: left;
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
     font-size: calc(14px + 0.6vmin);
     margin: 5px 15px;
     font-style: normal;
