@@ -15,7 +15,7 @@ const Input = styled.input`
     border-radius: 10px;
     border: none;
     font-size: calc(16px + 0.6vmin);
-    width: 100%;
+    width: calc(100% - 46px);
 `;
 
 const LongInput = styled.textarea`
@@ -25,7 +25,7 @@ const LongInput = styled.textarea`
     border-radius: 10px;
     border: none;
     font-size: calc(16px + 0.6vmin);
-    width: 100%;
+    width: calc(100% - 46px);
     resize: none;
     height: 180px;
 `;
@@ -34,7 +34,6 @@ const BoxGen = (props: Props) => {
     if (props.isLong)
         return (
             <LongInput 
-                className="mobile-full" 
                 id={props.id} 
                 placeholder={props.placeholder} 
             />
@@ -42,7 +41,6 @@ const BoxGen = (props: Props) => {
     else
         return (
             <Input 
-                className="mobile-full" 
                 id={props.id} 
                 placeholder={props.placeholder} 
             />

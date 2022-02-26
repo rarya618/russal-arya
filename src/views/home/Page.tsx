@@ -28,7 +28,7 @@ export const Section = styled.section`
 
 export const Content = styled.div`
     margin: auto;
-    padding: 30px 15px;
+    padding: 20px 10px;
     max-width: 1080px;
 `;
 

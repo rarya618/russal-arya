@@ -11,11 +11,23 @@ const Menu = styled.nav`
 	margin: 15px 20px;
 `;
 
+const StandardButton = styled.button`
+	border: solid 1px;
+	padding: 10px 18px;
+	margin: 8px;
+	font-style: normal;
+	font-weight: normal;
+	font-family: 'Oxygen';
+	font-size: calc(10px + 1vmin);
+	border-radius: 5px;
+`;
+
 type Props = {
 	label: string,
 	color?: string,
 	isFilled?: boolean,
-	link?: string
+	link?: string,
+	isClickable?: boolean
 };
 
 export const Button = (props: Props) => {
@@ -27,25 +39,38 @@ export const Button = (props: Props) => {
 		color = "yellow";
 	}
 
-	const StandardButton = styled.button`
-		border: solid 1px;
-		padding: 10px 18px;
-		margin: 8px;
-		font-style: normal;
-		font-weight: normal;
-		font-family: 'Oxygen';
-		font-size: calc(10px + 1vmin);
-		border-radius: 5px;
-	`;
-	
-	if (props.isFilled) {
-		if (color === "dark-green") {
-			return <a href={props.link}><StandardButton className={color + " yellow-text"}>{props.label}</StandardButton></a>
+	function getClickableClass(isClickable: boolean | undefined) {
+		if (isClickable) {
+			return "clickable ";
 		}
-		return <a href={props.link}><StandardButton className={color + " dark-green-text"}>{props.label}</StandardButton></a>
+
+		return "";
 	}
-	else
-		return <a href={props.link}><StandardButton className={"transparent " + color + "-text"}>{props.label}</StandardButton></a>
+
+	function getClassForButton(isFilled: boolean | undefined, color: string) {
+		if (isFilled) {
+			if (color === "dark-green") {
+				return color + " yellow-text";
+			}
+
+			return color + " dark-green-text";
+		}
+
+		return "transparent " + color + "-text";
+	}
+	
+	return (
+		<a href={props.link}>
+			<StandardButton 
+				className={
+					getClickableClass(props.isClickable) 
+					+ getClassForButton(props.isFilled, color)
+				}
+			>
+				{props.label}
+			</StandardButton>
+		</a>
+	)
 }
 
 function App() {

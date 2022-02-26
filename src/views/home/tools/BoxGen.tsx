@@ -44,7 +44,7 @@ export const Text = styled.p`
 const BoxGen = (props: Props) => {
     return (
         <Box className="mobile-full">
-            <RowContent>
+            <RowContent className="mobile-col">
                 <Logo src={props.logo} />
                 <ColContent>
                     <Title>{props.title}</Title>

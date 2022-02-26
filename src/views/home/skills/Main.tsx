@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../App.css';
 import styled from 'styled-components';
-import { Content, Section, Subtitle } from '../Page';
+import { Content, Section } from '../Page';
 import ListGen from './ListGen';
 
 type Props = {text: string}
@@ -22,21 +22,25 @@ export const Label = ({text}: Props) => {
 const RowContent = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 10px 50px;
     text-align: center;
 `;
 
 const ColContent = styled.div`
     display: flex;
-    width: calc(50% - 61px);
+    width: calc(50% - 1px);
     margin: 0;
-    padding: 30px;
+    padding: 0;
     flex-direction: column;
 `;
 
 export const Area = styled.div`
-    margin: 10px;
-    width: 100%;
+    margin: 10px 25px;
+    width: calc(100% - 50px);
+`;
+
+const Divider = styled.hr`
+    width: 25%;
+    border: solid 1px;
 `;
 
 export const LabelGen = (list: string[]) => {
@@ -74,11 +78,6 @@ const MoreFrameworks = [
     "RandomString", "FontAwesome"
 ]
 
-const Divider = styled.hr`
-    width: 25%;
-    border: solid 1px;
-`;
-
 function Skills() {
     return (
         <Section className="dark-green-gradient">
@@ -86,7 +85,7 @@ function Skills() {
                 <RowContent className="wrap">
                     <ColContent className="right-border yellow-text mobile-full">
                         <ListGen list={Languages} heading="Languages" />
-                        <ListGen list={Apps} heading="What apps have I worked on?" />
+                        <ListGen list={Apps} heading="What have I worked on?" />
                     </ColContent>
                     <ColContent className="mobile-full">
                         <ListGen list={Frameworks} heading="Frameworks" />

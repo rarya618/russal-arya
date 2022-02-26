@@ -1,8 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import '../../../App.css';
 
-import { RowContent, Subtitle } from '../Page';
+import { Subtitle } from '../Page';
 import { Area, LabelGen } from './Main';
+
+const RowContent = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    text-align: center;
+`;
 
 type Props = {
     list: string[],
