@@ -40,7 +40,7 @@ const Boxes = [
 
 
 const Form = () => {
-    const [submitted, setSubmitted] = useState<{name: string, email: string} | undefined>();
+    const [submitted, setSubmitted] = useState<{email: string} | undefined>();
 
     const saveAnswer = (event: FormEvent) => {
         event.preventDefault();
@@ -60,7 +60,7 @@ const Form = () => {
             if (formData.message !== '') {
                 db.collection("FormResponses").add(formData);
                 console.log("Thank you " + formData.name + ". We'll be in touch.");
-                setSubmitted({name: formData.name, email: formData.email});
+                setSubmitted({email: formData.email});
             }
             else {
                 alert("Please enter a message.")
@@ -73,7 +73,7 @@ const Form = () => {
     }
 
     if (submitted)
-        return <Subtitle className="dark-green-text">{"Thank you " + submitted.name + " for your message. We'll be in touch at " + submitted.email + "."}</Subtitle>
+        return <Subtitle className="dark-green-text">{"Thank you for your message. We'll be in touch at " + submitted.email + "."}</Subtitle>
     
     else
         return (

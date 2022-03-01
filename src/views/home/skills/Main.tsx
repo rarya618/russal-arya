@@ -50,32 +50,39 @@ export const LabelGen = (list: string[]) => {
 }
 
 const Languages = [
-    "JavaScript", "TypeScript",
-    "Python", "Java", "Bash", 
-    "HTML/CSS", "PHP", "SQL", 
-    "Swift", "C#"
+    "JavaScript", "TypeScript", "Python", "Java", 
+    "Bash", "HTML/CSS", "PHP", "SQL", "Swift", 
+    "C#"
 ]
 
 const Apps = [
-    "Web Apps", "Desktop Apps",
-    "Chrome Extensions", "Mobile Apps",
-    "REST APIs", "Command Line"
+    "Web Apps", "Desktop Apps", "Chrome Extensions", 
+    "Mobile Apps", "REST APIs", "Command Line"
+]
+
+const PackageManagers = [
+    "npm", "Homebrew", "yarn", "Chrome APIs"
+]
+
+const Databases = [
+    "MySQL", "MongoDB", "Firestore"
 ]
 
 const Frameworks = [
-    "React.js", "Node.js", "Express",
-    "Electron", "Next.js", "Angular",
-    "Mongoose", "SwiftUI",
-    "Chrome APIs", "React Native"
+    "React.js", "Node.js", "Express", "Electron", 
+    "Next.js", "Angular", "Mongoose", "SwiftUI",
+     "React Native"
 ]
 
-const MoreFrameworks = [
-    "Create React App", "Nodemon", 
-    "React Hooks", "Bootstrap", 
-    "Axios", "Styled Components",
-    "BodyParser", "ReactRouter", 
-    "Fetch API", 
-    "RandomString", "FontAwesome"
+const Libraries = [
+    "Create React App", "Nodemon", "React Hooks", 
+    "Bootstrap", "Axios", "Styled Components",
+    "FFmpeg", "BodyParser", "ReactRouter", 
+    "Fetch API", "RandomString", "FontAwesome"
+]
+
+const Deployment = [
+    "AWS EC2", "Firebase", "Docker"
 ]
 
 function Skills() {
@@ -85,12 +92,14 @@ function Skills() {
                 <RowContent className="wrap">
                     <ColContent className="right-border yellow-text mobile-full">
                         <ListGen list={Languages} heading="Languages" />
-                        <ListGen list={Apps} heading="What have I worked on?" />
+                        <ListGen list={Apps} heading="Types of apps I built" />
+                        <ListGen list={PackageManagers} heading="Package managers" />
+                        <ListGen list={Databases} heading="Databases" />
                     </ColContent>
                     <ColContent className="mobile-full">
                         <ListGen list={Frameworks} heading="Frameworks" />
-                        <Divider className="yellow-text"/>
-                        <ListGen list={MoreFrameworks} />
+                        <ListGen list={Deployment} heading="Deployment" />
+                        <ListGen list={Libraries} heading="Libraries and dependencies" />
                     </ColContent>
                 </RowContent>
             </Content>
